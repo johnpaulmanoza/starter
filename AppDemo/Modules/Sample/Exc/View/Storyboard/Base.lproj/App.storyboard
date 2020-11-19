@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g39-kx-SXt">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexSans-Bold.ttf">
+            <string>IBMPlexSans-Bold</string>
+        </array>
+        <array key="IBMPlexSans-Medium.ttf">
+            <string>IBMPlexSans-Medium</string>
+        </array>
+        <array key="IBMPlexSans-Regular.ttf">
+            <string>IBMPlexSans</string>
+        </array>
+        <array key="IBMPlexSans-SemiBold.ttf">
+            <string>IBMPlexSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Currency Converter-->
+        <scene sceneID="SD0-hC-Zgg">
+            <objects>
+                <viewController storyboardIdentifier="ExcViewController" id="v16-wD-ryS" customClass="ExcViewController" customModule="CurrencyConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPi-Bi-etG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yFx-tY-sr9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConversionCell" rowHeight="432" id="hJP-P9-r3u" customClass="ConversionCell" customModule="CurrencyConvert" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="432"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJP-P9-r3u" id="7yG-ui-X83">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N76-f7-Lub">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL BALANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZd-za-EYl">
+                                                            <rect key="frame" x="8" y="18" width="359" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="q2U-BB-G7E"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="14"/>
+                                                            <color key="textColor" red="0.6588235294117647" green="0.67843137254901964" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000 EUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inG-ep-Zgt">
+                                                            <rect key="frame" x="8" y="48" width="359" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="odn-6D-czT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="32"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-6I-PmI">
+                                                            <rect key="frame" x="137.66666666666666" y="106" width="100" height="30"/>
+                                                            <color key="backgroundColor" red="0.25098039215686274" green="0.29803921568627451" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Jxk-2U-r1L"/>
+                                                                <constraint firstAttribute="height" constant="30" id="YSt-IM-sk2"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="15"/>
+                                                            <state key="normal" title="All wallets">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="inG-ep-Zgt" firstAttribute="top" secondItem="CZd-za-EYl" secondAttribute="bottom" id="6g2-ug-bvk"/>
+                                                        <constraint firstItem="0VV-6I-PmI" firstAttribute="top" secondItem="inG-ep-Zgt" secondAttribute="bottom" constant="8" id="DRg-M9-P56"/>
+                                                        <constraint firstAttribute="width" constant="375" id="Gmg-jw-Z69"/>
+                                                        <constraint firstItem="CZd-za-EYl" firstAttribute="top" secondItem="N76-f7-Lub" secondAttribute="top" constant="18" id="Npz-7a-p8p"/>
+                                                        <constraint firstItem="0VV-6I-PmI" firstAttribute="centerX" secondItem="N76-f7-Lub" secondAttribute="centerX" id="XuM-Mp-n7h"/>
+                                                        <constraint firstAttribute="height" constant="202" id="dIM-Ot-MPC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CZd-za-EYl" secondAttribute="trailing" constant="8" id="h09-ft-ZEZ"/>
+                                                        <constraint firstItem="CZd-za-EYl" firstAttribute="leading" secondItem="N76-f7-Lub" secondAttribute="leading" constant="8" id="iEj-e7-oTP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="inG-ep-Zgt" secondAttribute="trailing" constant="8" id="qP3-zi-1Vh"/>
+                                                        <constraint firstItem="inG-ep-Zgt" firstAttribute="leading" secondItem="N76-f7-Lub" secondAttribute="leading" constant="8" id="uOU-YC-szd"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-xw-Pqb">
+                                                    <rect key="frame" x="15" y="156" width="345" height="249"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24j-wF-v7e">
+                                                            <rect key="frame" x="18" y="18" width="309" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="XgJ-PS-T7a"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="18"/>
+                                                            <color key="textColor" red="0.25098039215686274" green="0.29803921568627451" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbz-AA-IoO">
+                                                            <rect key="frame" x="267" y="57" width="60" height="50"/>
+                                                            <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="1zk-JH-Pe0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-SemiBold" family="IBM Plex Sans" pointSize="18"/>
+                                                            <state key="normal" title="EUR">
+                                                                <color key="titleColor" red="0.23921568627450979" green="0.40000000000000002" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="re3-eL-eeA">
+                                                            <rect key="frame" x="18" y="57" width="231" height="50"/>
+                                                            <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="231" id="HWE-tj-y7F"/>
+                                                                <constraint firstAttribute="height" constant="50" id="zJR-QX-5LX"/>
+                                                            </constraints>
+                                                            <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKL-gz-MJF">
+                                                            <rect key="frame" x="267" y="121" width="60" height="50"/>
+                                                            <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="XQJ-ko-Uon"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-SemiBold" family="IBM Plex Sans" pointSize="18"/>
+                                                            <state key="normal" title="USD">
+                                                                <color key="titleColor" red="0.23921568630000001" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-QG-Ycn">
+                                                            <rect key="frame" x="18" y="121" width="231" height="50"/>
+                                                            <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="S2U-Vj-PvV"/>
+                                                                <constraint firstAttribute="width" constant="231" id="doh-va-1xE"/>
+                                                            </constraints>
+                                                            <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp9-WS-BsJ">
+                                                            <rect key="frame" x="18" y="189" width="309" height="40"/>
+                                                            <color key="backgroundColor" red="0.25098039215686274" green="0.29803921568627451" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="ljZ-eO-oiN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-SemiBold" family="IBM Plex Sans" pointSize="17"/>
+                                                            <state key="normal" title="Submit">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Pbz-AA-IoO" firstAttribute="top" secondItem="24j-wF-v7e" secondAttribute="bottom" constant="18" id="3JO-wN-ykv"/>
+                                                        <constraint firstItem="fp9-WS-BsJ" firstAttribute="leading" secondItem="MeL-xw-Pqb" secondAttribute="leading" constant="18" id="3wh-QZ-JPa"/>
+                                                        <constraint firstItem="Pbz-AA-IoO" firstAttribute="leading" secondItem="re3-eL-eeA" secondAttribute="trailing" constant="18" id="APo-Xd-MOE"/>
+                                                        <constraint firstItem="fp9-WS-BsJ" firstAttribute="top" secondItem="IKL-gz-MJF" secondAttribute="bottom" constant="18" id="AgH-iA-2Ev"/>
+                                                        <constraint firstItem="re3-eL-eeA" firstAttribute="leading" secondItem="MeL-xw-Pqb" secondAttribute="leading" constant="18" id="Haa-MX-S0Y"/>
+                                                        <constraint firstAttribute="height" constant="249" id="NLU-QE-zZT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fp9-WS-BsJ" secondAttribute="trailing" constant="18" id="QPh-Dr-IMD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IKL-gz-MJF" secondAttribute="trailing" constant="18" id="Qgv-Qv-bf2"/>
+                                                        <constraint firstAttribute="width" constant="345" id="TX3-sT-WG1"/>
+                                                        <constraint firstItem="re3-eL-eeA" firstAttribute="top" secondItem="24j-wF-v7e" secondAttribute="bottom" constant="18" id="b3S-Jv-O5s"/>
+                                                        <constraint firstItem="24j-wF-v7e" firstAttribute="leading" secondItem="MeL-xw-Pqb" secondAttribute="leading" constant="18" id="cMF-vt-eA8"/>
+                                                        <constraint firstItem="IKL-gz-MJF" firstAttribute="top" secondItem="Pbz-AA-IoO" secondAttribute="bottom" constant="14" id="gs7-lG-Cia"/>
+                                                        <constraint firstAttribute="trailing" secondItem="24j-wF-v7e" secondAttribute="trailing" constant="18" id="if8-Uv-1rm"/>
+                                                        <constraint firstItem="24j-wF-v7e" firstAttribute="top" secondItem="MeL-xw-Pqb" secondAttribute="top" constant="18" id="kPr-2Q-rZH"/>
+                                                        <constraint firstItem="Vfe-QG-Ycn" firstAttribute="leading" secondItem="MeL-xw-Pqb" secondAttribute="leading" constant="18" id="nJn-GY-P73"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Pbz-AA-IoO" secondAttribute="trailing" constant="18" id="oBI-tr-pko"/>
+                                                        <constraint firstItem="Vfe-QG-Ycn" firstAttribute="top" secondItem="re3-eL-eeA" secondAttribute="bottom" constant="14" id="pY2-o5-qxf"/>
+                                                        <constraint firstItem="IKL-gz-MJF" firstAttribute="leading" secondItem="Vfe-QG-Ycn" secondAttribute="trailing" constant="18" id="uEb-o6-lAh"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MeL-xw-Pqb" firstAttribute="top" secondItem="7yG-ui-X83" secondAttribute="topMargin" constant="145" id="6bk-W5-b3b"/>
+                                                <constraint firstAttribute="trailing" secondItem="N76-f7-Lub" secondAttribute="trailing" id="BEb-B5-tGe"/>
+                                                <constraint firstItem="MeL-xw-Pqb" firstAttribute="trailing" secondItem="7yG-ui-X83" secondAttribute="trailingMargin" id="RZ9-3P-uPc"/>
+                                                <constraint firstItem="N76-f7-Lub" firstAttribute="top" secondItem="7yG-ui-X83" secondAttribute="top" id="US2-E4-CMU"/>
+                                                <constraint firstItem="MeL-xw-Pqb" firstAttribute="leading" secondItem="7yG-ui-X83" secondAttribute="leadingMargin" id="bfT-FR-g9g"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MeL-xw-Pqb" secondAttribute="bottom" constant="16" id="ht9-dg-TUu"/>
+                                                <constraint firstItem="N76-f7-Lub" firstAttribute="leading" secondItem="7yG-ui-X83" secondAttribute="leading" id="iz4-e0-ccN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="conversionView" destination="MeL-xw-Pqb" id="2WN-Dv-cKo"/>
+                                            <outlet property="fromCurrencyButton" destination="Pbz-AA-IoO" id="UzS-Nk-vev"/>
+                                            <outlet property="fromField" destination="re3-eL-eeA" id="wNJ-Hx-aYP"/>
+                                            <outlet property="submitButton" destination="fp9-WS-BsJ" id="yGe-ho-rhj"/>
+                                            <outlet property="toCurrencyButton" destination="IKL-gz-MJF" id="zkh-2h-K7c"/>
+                                            <outlet property="toField" destination="Vfe-QG-Ycn" id="qsX-dw-dX3"/>
+                                            <outlet property="totalBalanceLabel" destination="inG-ep-Zgt" id="hVj-2k-NOv"/>
+                                            <outlet property="walletButton" destination="0VV-6I-PmI" id="Uq4-S7-pJg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yFx-tY-sr9" secondAttribute="bottom" id="760-1K-vEz"/>
+                            <constraint firstItem="yFx-tY-sr9" firstAttribute="top" secondItem="OPi-Bi-etG" secondAttribute="top" id="Tjg-FF-p8V"/>
+                            <constraint firstItem="yFx-tY-sr9" firstAttribute="leading" secondItem="c6F-rG-4pb" secondAttribute="leading" id="Wzn-i5-brR"/>
+                            <constraint firstItem="yFx-tY-sr9" firstAttribute="trailing" secondItem="c6F-rG-4pb" secondAttribute="trailing" id="wER-IQ-9QJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c6F-rG-4pb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Converter" id="Xmq-sb-D1d"/>
+                    <connections>
+                        <outlet property="tableView" destination="yFx-tY-sr9" id="bV5-F8-g0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gO-DC-72D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320.80000000000001" y="533.49753694581284"/>
+        </scene>
+        <!--Currencies-->
+        <scene sceneID="Xui-4g-T8M">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyViewController" id="II1-Te-46m" customClass="CurrencyViewController" customModule="CurrencyConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d58-Bs-gcM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="32l-HE-ROO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CurrencyCell" rowHeight="60" id="03j-WB-Gz1" customClass="CurrencyCell" customModule="CurrencyConvert" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03j-WB-Gz1" id="a5o-QY-AWe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-IC-PbW">
+                                                    <rect key="frame" x="15" y="14" width="48" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="QeA-KV-5vn"/>
+                                                        <constraint firstAttribute="width" constant="48" id="pAV-vl-JRZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-22-mqV">
+                                                    <rect key="frame" x="77" y="14" width="185" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="2B4-oc-Mf9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBy-4a-SrG">
+                                                    <rect key="frame" x="270" y="14" width="90" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="MUu-Yo-vmo"/>
+                                                        <constraint firstAttribute="height" constant="32" id="PIf-zq-c0A"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WLH-22-mqV" firstAttribute="top" secondItem="a5o-QY-AWe" secondAttribute="topMargin" constant="3" id="2ps-Pd-mgF"/>
+                                                <constraint firstItem="2Wt-IC-PbW" firstAttribute="top" secondItem="a5o-QY-AWe" secondAttribute="topMargin" constant="3" id="94B-Xj-Peq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WLH-22-mqV" secondAttribute="bottom" constant="3" id="J12-to-Bv7"/>
+                                                <constraint firstItem="2Wt-IC-PbW" firstAttribute="leading" secondItem="a5o-QY-AWe" secondAttribute="leadingMargin" id="NaW-Uy-ZE9"/>
+                                                <constraint firstItem="UBy-4a-SrG" firstAttribute="leading" secondItem="WLH-22-mqV" secondAttribute="trailing" constant="8" id="S3K-1o-Ja2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2Wt-IC-PbW" secondAttribute="bottom" constant="3" id="Tsl-3V-R45"/>
+                                                <constraint firstItem="WLH-22-mqV" firstAttribute="leading" secondItem="2Wt-IC-PbW" secondAttribute="trailing" constant="14" id="Wqe-i3-BiJ"/>
+                                                <constraint firstItem="UBy-4a-SrG" firstAttribute="top" secondItem="a5o-QY-AWe" secondAttribute="topMargin" constant="3" id="uAW-5L-jl2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UBy-4a-SrG" secondAttribute="bottom" constant="3" id="uDa-V2-pVl"/>
+                                                <constraint firstItem="UBy-4a-SrG" firstAttribute="trailing" secondItem="a5o-QY-AWe" secondAttribute="trailingMargin" id="wIg-9c-7hE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="currencyNameLabel" destination="WLH-22-mqV" id="RYF-8a-43T"/>
+                                            <outlet property="currencyRateLabel" destination="UBy-4a-SrG" id="SL4-TW-rja"/>
+                                            <outlet property="flagIconImageView" destination="2Wt-IC-PbW" id="qVP-Co-POY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="32l-HE-ROO" firstAttribute="bottom" secondItem="EGk-PD-7Je" secondAttribute="bottom" id="TNd-3s-efI"/>
+                            <constraint firstItem="32l-HE-ROO" firstAttribute="top" secondItem="EGk-PD-7Je" secondAttribute="top" id="VGi-h3-98L"/>
+                            <constraint firstItem="32l-HE-ROO" firstAttribute="trailing" secondItem="EGk-PD-7Je" secondAttribute="trailing" id="ks6-wF-2d4"/>
+                            <constraint firstItem="32l-HE-ROO" firstAttribute="leading" secondItem="EGk-PD-7Je" secondAttribute="leading" id="wr2-Ad-mzF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EGk-PD-7Je"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currencies" id="Zk6-cB-FDE">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="hG6-Ae-7UH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="32l-HE-ROO" id="Kg9-ge-RLl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ayb-Mv-us9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5999999999999" y="532.75862068965523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ll-oB-QMh">
+            <objects>
+                <navigationController storyboardIdentifier="CurrencyViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="Ajh-9r-0T5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hyd-om-YKA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="II1-Te-46m" kind="relationship" relationship="rootViewController" id="pJc-oI-mlA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pz5-sU-TMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591.20000000000005" y="532.75862068965523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XsU-4w-zWq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g39-kx-SXt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="nBz-Ek-RiV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647058823529" green="0.22352941176470587" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v16-wD-ryS" kind="relationship" relationship="rootViewController" id="aEt-kP-Wvq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQN-fv-YtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1263.2" y="533.49753694581284"/>
+        </scene>
+        <!--Wallets-->
+        <scene sceneID="lhl-PI-5Gx">
+            <objects>
+                <viewController storyboardIdentifier="WalletViewController" id="jlI-MA-Bee" customClass="WalletViewController" customModule="CurrencyConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Fx-ZD-gqh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="myZ-FW-aOZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletCell" rowHeight="166" id="mWf-yJ-bUa" customClass="WalletCell" customModule="CurrencyConvert" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mWf-yJ-bUa" id="b2M-Dh-Ve8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-9f-M1S">
+                                                    <rect key="frame" x="15" y="19" width="345" height="128"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="88l-KK-HDU">
+                                                            <rect key="frame" x="18" y="18" width="48" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="d4T-lu-yDo"/>
+                                                                <constraint firstAttribute="width" constant="48" id="flN-pS-jxs"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX1-NK-U3u">
+                                                            <rect key="frame" x="18" y="70" width="319" height="38"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="38" id="zVa-CT-VJM"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="32"/>
+                                                            <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnF-yU-eG8">
+                                                            <rect key="frame" x="82" y="18" width="255" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="B7X-QG-mXO"/>
+                                                                <constraint firstAttribute="width" constant="255" id="h9Q-14-d4c"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IBMPlexSans" family="IBM Plex Sans" pointSize="15"/>
+                                                            <color key="textColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="0Yr-9M-axD"/>
+                                                        <constraint firstItem="MnF-yU-eG8" firstAttribute="top" secondItem="vtA-9f-M1S" secondAttribute="top" constant="18" id="1tI-DF-dNR"/>
+                                                        <constraint firstItem="JX1-NK-U3u" firstAttribute="top" secondItem="88l-KK-HDU" secondAttribute="bottom" constant="20" id="4dW-Ai-Afg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JX1-NK-U3u" secondAttribute="trailing" constant="8" id="7Yr-fY-JdV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MnF-yU-eG8" secondAttribute="trailing" constant="8" id="Ck3-Vc-FN1"/>
+                                                        <constraint firstItem="88l-KK-HDU" firstAttribute="leading" secondItem="vtA-9f-M1S" secondAttribute="leading" constant="18" id="GbQ-sU-AEx"/>
+                                                        <constraint firstItem="MnF-yU-eG8" firstAttribute="leading" secondItem="88l-KK-HDU" secondAttribute="trailing" constant="16" id="Jfv-TF-ZlP"/>
+                                                        <constraint firstItem="JX1-NK-U3u" firstAttribute="leading" secondItem="vtA-9f-M1S" secondAttribute="leading" constant="18" id="TPP-9v-3FE"/>
+                                                        <constraint firstItem="88l-KK-HDU" firstAttribute="top" secondItem="vtA-9f-M1S" secondAttribute="top" constant="18" id="TRH-Oa-DHu"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="ZR7-nL-2bY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JX1-NK-U3u" secondAttribute="bottom" constant="20" id="opo-Gh-6dg"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vtA-9f-M1S" firstAttribute="trailing" secondItem="b2M-Dh-Ve8" secondAttribute="trailingMargin" id="ALy-Xh-eHY"/>
+                                                <constraint firstItem="vtA-9f-M1S" firstAttribute="leading" secondItem="b2M-Dh-Ve8" secondAttribute="leadingMargin" id="CsM-0l-vtK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vtA-9f-M1S" secondAttribute="bottom" constant="8" id="Dc2-fV-Gfo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vtA-9f-M1S" secondAttribute="bottom" constant="8" id="JJD-p1-D4T"/>
+                                                <constraint firstItem="vtA-9f-M1S" firstAttribute="top" secondItem="b2M-Dh-Ve8" secondAttribute="topMargin" constant="8" id="faI-SU-NWJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="vtA-9f-M1S" id="SxD-T1-Kmq"/>
+                                            <outlet property="currencyNameLabel" destination="MnF-yU-eG8" id="ljo-40-HbF"/>
+                                            <outlet property="flagIconImageView" destination="88l-KK-HDU" id="Gjo-Yc-M8K"/>
+                                            <outlet property="totalBalanceLabel" destination="JX1-NK-U3u" id="bNg-iT-3hH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="myZ-FW-aOZ" firstAttribute="leading" secondItem="8y2-3E-5is" secondAttribute="leading" id="5pa-op-xYv"/>
+                            <constraint firstItem="myZ-FW-aOZ" firstAttribute="top" secondItem="8y2-3E-5is" secondAttribute="top" id="OWS-Qw-Js4"/>
+                            <constraint firstItem="myZ-FW-aOZ" firstAttribute="trailing" secondItem="8y2-3E-5is" secondAttribute="trailing" id="PQd-nb-zug"/>
+                            <constraint firstItem="myZ-FW-aOZ" firstAttribute="bottom" secondItem="8y2-3E-5is" secondAttribute="bottom" id="g2V-Yg-GRc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8y2-3E-5is"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wallets" id="muU-AE-T9L">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="2jG-Ss-Hys">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="myZ-FW-aOZ" id="V0u-AK-Sfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2f-of-a4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5999999999999" y="1277.5862068965519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VT8-Yi-uuq">
+            <objects>
+                <navigationController storyboardIdentifier="WalletViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="M5X-mk-V2S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bIL-iw-PKr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14117647059999999" green="0.22352941179999999" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="IBMPlexSans-Medium" family="IBM Plex Sans" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jlI-MA-Bee" kind="relationship" relationship="rootViewController" id="9ce-6W-17S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEK-54-E8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="1278"/>
+        </scene>
+    </scenes>
+</document>
